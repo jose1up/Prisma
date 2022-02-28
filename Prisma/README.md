@@ -66,3 +66,21 @@ donde tenemos que cambiar algunos datos segun la base de datos que queremos usar
 
 [![Prima.png](https://i.postimg.cc/pLmmWyjd/Prima.png)](https://postimg.cc/fVhz5zB4)
 
+
+## Prisma db
+
+hacemos  `npm prisma generate ` en consola.
+copiamos const prisma y el cliente para podes hacer peticiones a db 
+
+
+
+
+## App.js 
+```javascript
+const express = require("express");
+const { send } = require("process");
+const app = express();
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+```
+
