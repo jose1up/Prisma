@@ -70,6 +70,7 @@ donde tenemos que cambiar algunos datos segun la base de datos que queremos usar
 ## Prisma db
 
 hacemos  `npm prisma generate ` en consola.
+esto no va a crear los modelos de tablas en prisma/prisma.shema
 copiamos const prisma y el cliente para podes hacer peticiones a db 
 
 
@@ -83,4 +84,29 @@ const app = express();
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 ```
+
+
+## App.js 
+hacemos la peticones de esta forma 
+```javascript
+app.get("/user", async (req, res) => {
+  try {
+    const allUser = await prisma.user.findMany();
+    res.send(allUser);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+
+```
+
+
+## Prisma db
+
+hacemos  `npm prisma push ` en consola.
+para pushear cambios en los modelos de tablas 
+
+hacemos  `npm prisma pull ` en consola.
+para traer las tablas de la db si ya tenemos creadas tablas en la db
 
