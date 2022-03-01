@@ -69,7 +69,7 @@ donde tenemos que cambiar algunos datos segun la base de datos que queremos usar
 
 ## Prisma db
 
-hacemos  `npm prisma generate ` en consola.
+hacemos  `npx prisma generate ` en consola.
 esto no va a crear los modelos de tablas en prisma/prisma.shema
 copiamos const prisma y el cliente para podes hacer peticiones a db 
 
